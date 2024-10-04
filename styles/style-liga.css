@@ -1,0 +1,253 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html body{
+    background-color: black;
+    color: white;
+    font-family: "Montserrat", Arial;
+    font-weight: 430;
+    width: 100%;
+    height: 100%;
+}
+
+header{
+    background-image: linear-gradient(to top, rgb(0, 0, 0), rgba(0, 0, 0, 0)), url(../imagens/liga-alexross.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 500px;
+    position: relative;
+}
+
+header nav{
+    display: flex;
+    width: 100%;
+    padding: 50px;
+    align-items: center;
+}
+header nav ul{
+    list-style: none;
+    margin-left: auto;
+}
+header nav ul a{
+    text-decoration: none;
+    color: white;
+}
+header nav ul li{
+    background-color: black;
+    border: 2px solid blue;
+    display: inline;
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    margin-left: 20px;
+    border-radius: 10px;
+    transition: 0.5s ease;
+}
+header nav ul li:hover{
+    color: blue;
+}
+#div-logo{
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#logo{
+    font-size: 80px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-transform: uppercase;/*Deixa as letras sempre maiúsculas em qualquer PC*/
+}
+
+main{ /*div maior que vai envolver todo o conteúdo principal da página*/
+    display: block; /*Mantém uma padrão para manter os elementos em blocos*/
+    overflow: hidden;/*Não permite que os elementos ultrapassem o chão da caixa*/
+    width: 100%;
+    height: auto; /*Fica com a altura adequada aos elementos internos, mas é necessário ter o display: block; e o overflow: hidden; para funcionar*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 120px;
+}
+
+#section-1{ /*Envolve a div que vai conter as imagens*/
+    width: 750px;
+    height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#div-personagens{ /*Envolve de fato as imagens*/
+    width: 100%; /*Toma toda a section-1*/
+    height: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+    gap: 20px;
+}
+
+.personagens{ /*class para dar estilos gerais a todas*/
+    position: relative;
+    background-color: blue;
+    text-transform: uppercase;/*Deixa as letras sempre maiúsculas em qualquer PC*/
+    transition: 0.5s ease;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.personagens h3{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.768);
+    color: blue;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+.personagens:hover h3{
+    opacity: 1;
+    font-weight: 600;
+}
+
+#superman{
+    background-image: url(../imagens/supermanicon.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+#batman{
+    background-image: url(../imagens/batmanicon.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#mulher-maravilha{
+    background-image: url(../imagens/mulher-maravilhaicon.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#flash{
+    background-image: url(../imagens/flashicon.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#lanterna{
+    background-image: url(../imagens/lanternaicon.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#aquaman{
+    background-image: url(../imagens/aquamanicon.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#caçador{
+    background-image: url(../imagens/caçadoricon.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#mulher-gavião{
+    background-image: url(../imagens/mulher-gaviãoicon.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#ciborgue{
+    background-image: url(../imagens/ciborgueicon.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+footer{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+}
+
+@media(max-width: 1140px){
+    #logo{
+        font-size: 50px;
+    }
+    #section-1{ /*Envolve a div que vai conter as imagens*/
+        width: 550px;
+        height: 800px;
+    }
+    #div-personagens{
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto auto auto;
+    }
+}
+
+@media(max-width: 570px){
+    header{
+        background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.889), rgb(39, 0, 211));        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 410px;
+        box-shadow: 20px 0px 10px blue;
+        position: relative;
+    }
+    header nav{
+        text-align: center;
+        display: flex;
+        width: auto;
+    }
+    header nav ul{
+        list-style: none;
+        margin-left: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    header nav ul li{
+        background-color: black;
+        border: 2px solid blue;
+        display: block;
+        width: 120px;
+        height: 40px;
+        padding: 10px;
+        margin-left: 20px;
+        transition: 0.4s ease;
+    }
+    #logo{
+        font-size: 30px;
+    }
+    #section-1{
+        width: 400px;
+        height: 600px;
+    }
+}
+
+@media (max-width: 410px) {
+    #logo{
+        font-size: 30px;
+    }
+    #section-1{
+        width: 290px;
+        height: 470px;
+    }
+}

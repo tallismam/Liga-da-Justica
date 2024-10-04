@@ -1,0 +1,225 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html body{
+    background-color: black;
+    color: white;
+    font-family: "Montserrat", Arial;
+    font-weight: 430;
+    width: 100%;
+    height: 100%;
+}
+
+header{
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.889), rgba(0, 0, 0, 0)), url(../imagens/dc-fundo.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 500px;
+    position: relative;
+}
+
+header nav{
+    display: flex;
+    width: 100%;
+    padding: 50px;
+    align-items: center;
+}
+header nav ul{
+    list-style: none;
+    margin-left: auto;
+}
+header nav ul a{
+    text-decoration: none;
+    color: white;
+}
+header nav ul li{
+    background-color: black;
+    border: 2px solid rgb(63, 0, 189);
+    display: inline;
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    margin-left: 20px;
+    border-radius: 10px;
+    transition: 0.5s ease;
+}
+header nav ul li:hover{
+    color: rgb(63, 0, 189);
+}
+#div-logo{
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#logo{
+    font-size: 80px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-transform: uppercase;/*Deixa as letras sempre maiúsculas em qualquer PC*/
+}
+
+main{ /*div maior que vai envolver todo o conteúdo principal da página*/
+    display: block; /*Mantém uma padrão para manter os elementos em blocos*/
+    overflow: hidden;/*Não permite que os elementos ultrapassem o chão da caixa*/
+    width: 100%;
+    height: auto; /*Fica com a altura adequada aos elementos internos, mas é necessário ter o display: block; e o overflow: hidden; para funcionar*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 120px;
+}
+
+#section-1{ /*Envolve a div que vai conter as imagens*/
+    width: 750px;
+    height: 200px;
+}
+
+#div-personagens{ /*Envolve de fato as imagens*/
+    width: 100%; /*Toma toda a section-1*/
+    height: 100%;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    column-gap: 100px;
+}
+
+.cards{ /*class para dar estilos gerais a todas*/
+    position: relative;
+    background-color: blue;
+    text-transform: uppercase;/*Deixa as letras sempre maiúsculas em qualquer PC*/
+    transition: 0.5s ease;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 100%;
+    transition: all 0.5s ease;
+}
+#heróis{
+    background-image: url(../imagens/liga-alexross.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 7px solid rgb(0, 0, 194);
+    transition: 0.5s ease;
+}
+#heróis:hover{
+    border: 15px solid blue;
+}
+
+.cards h3{
+    position: absolute;
+    bottom: 0px;
+    color: white;
+    text-transform: uppercase;/*manterá sempre as letras MAIÚSCULAS*/
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: 0.5s ease;
+}
+#heróis:hover h3{
+    opacity: 1;
+    color: blue;
+    background-color: rgba(0, 0, 0, 0.774);
+    border-radius: 100%;
+    width: 100px;
+    font-weight: 600;
+}
+
+#vilões{
+    background-image: url(../imagens/legião.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 7px solid rgb(190, 0, 0);
+    transition: 0.5s ease;
+}
+#vilões:hover{
+    border: 15px solid red;
+}
+#vilões:hover h3{
+    opacity: 1;
+    color: red;
+    background-color: rgba(0, 0, 0, 0.774);
+    width: 100px;
+    border-radius: 100%;
+    font-weight: 600;
+}
+
+footer{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+}
+
+@media(max-width: 1140px){
+    #logo{
+        font-size: 50px;
+    }
+    #section-1{ /*Envolve a div que vai conter as imagens*/
+        width: 750px;
+        height: 200px;
+    }
+    #div-personagens{
+        grid-template-columns: auto auto;
+    }
+}
+
+@media(max-width: 810px){
+    header{
+        background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.889), rgb(63, 0, 189));        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 410px;
+        position: relative;
+    }
+    header nav{
+        text-align: center;
+        display: flex;
+        width: auto;
+    }
+    header nav ul{
+        list-style: none;
+        margin-left: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    header nav ul li{
+        background-color: black;
+        border: 2px solid rgb(63, 0, 189);
+        display: block;
+        width: 120px;
+        height: 40px;
+        padding: 10px;
+        margin-left: 20px;
+        transition: 0.4s ease;
+    }
+    #logo{
+        font-size: 30px;
+    }
+    #section-1{ /*Envolve a div que vai conter as imagens*/
+        width: 300px;
+        height: 300px;
+    }
+    #div-personagens{ /*Envolve de fato as imagens*/
+        grid-template-columns: auto;
+        grid-row: auto auto;
+        gap: 50px;
+    }
+}

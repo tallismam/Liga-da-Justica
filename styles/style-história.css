@@ -1,0 +1,283 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html body{
+    background-color: black;
+    color: white;
+    font-family: "Montserrat", Arial;
+    font-weight: 430;
+    width: 100%;
+    height: 100%;
+}
+
+header{
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.889), rgba(0, 0, 0, 0)), url(../imagens/dc-fundo.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 500px;
+    position: relative;
+}
+
+header nav{
+    display: flex;
+    width: 100%;
+    padding: 50px;
+    align-items: center;
+}
+header nav ul{
+    list-style: none;
+    margin-left: auto;
+}
+header nav ul a{
+    text-decoration: none;
+    color: white;
+}
+header nav ul li{
+    background-color: black;
+    border: 2px solid rgb(63, 0, 189);
+    display: inline;
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    margin-left: 20px;
+    border-radius: 10px;
+    transition: 0.5s ease;
+}
+header nav ul li:hover{
+    color: rgb(63, 0, 189);
+}
+#div-logo{
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#logo{
+    font-size: 80px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-transform: uppercase;/*Deixa as letras sempre maiúsculas em qualquer PC*/
+}
+
+main{ 
+    display: block;
+    width: 100%;
+    height: auto; 
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 120px;
+}
+  
+#section-1{
+    display: block;
+    overflow: hidden;
+    width: 800px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#artigo{
+    background-color: rgb(63, 0, 189);
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+#artigo h1{
+    background-color: rgb(27, 0, 82);
+    font-size: 23px;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    border: 1px solid black;
+    padding: 20px;
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.516);
+    text-transform: uppercase;/*Deixa as letras sempre maiúsculas em qualquer PC*/
+}
+#artigo p{
+    padding: 20px;
+    text-align: justify;
+    font-size: 17.9px;
+    letter-spacing: 0.2px;
+}
+#artigo p img{
+    float: left; /*Permite que a imagem flutue à esquerda, podendo o texto flutuar em volta dela*/
+    margin: 0 15px 10px 0; /*Espaços adicionado em volta da imagem (superior:0px, direita:15px, inferior:10px, esquerda:0px)*/
+    width: 295px;
+    height: 423px;
+    border: 4px solid rgb(27, 0, 82);
+}
+#artigo p b{
+    font-size: 19px;
+    text-transform: uppercase;/*Deixa as letras sempre maiúsculas em qualquer PC*/
+}
+#div-botão-voltar{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+button{
+    background-color: black;
+    text-transform: uppercase;/*Deixa as letras sempre maiúsculas em qualquer PC*/
+    border: 1px solid rgba(0, 0, 0, 0);
+    font-size: 14px;
+    color: white;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+button:hover{
+    color: rgb(63, 0, 189);
+}
+
+footer{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+}
+
+@media(max-width: 1140px){
+    header{
+        background-image: linear-gradient(130deg, black, rgb(63, 0, 189));
+        box-shadow: 20px 0px 10px rgb(63, 0, 189);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 410px;
+        position: relative;
+    }
+    header nav{
+        text-align: center;
+        display: flex;
+        width: auto;
+    }
+    header nav ul{
+        list-style: none;
+        margin-left: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    header nav ul li{
+        background-color: black;
+        border: 2px solid rgb(63, 0, 189);
+        display: block;
+        width: 120px;
+        height: 40px;
+        padding: 10px;
+        margin-left: 20px;
+        transition: 0.4s ease;
+    }
+    #logo{
+        font-size: 50px;
+    }
+    #section-1{
+        display: block;
+        overflow: hidden;
+        width: 550px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    #artigo p{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 13px;
+        padding: 13px;
+    }
+    
+}
+@media(max-width: 850px){
+    #logo{
+        font-size: 50px;
+    }
+}
+
+@media(max-width: 700px){
+    header{
+        background-image: linear-gradient(130deg, black, rgb(63, 0, 189));
+        box-shadow: 20px 0px 10px rgb(63, 0, 189);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 350px;
+        position: relative;
+    }
+    header nav{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    header nav ul{
+        list-style: none;
+        margin-left: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        gap: 30px;
+    }
+    header nav ul li{
+        background-color: black;
+        border: 2px solid rgb(63, 0, 189);
+        display: block;
+        width: 120px;
+        height: 40px;
+        padding: 10px;
+        margin-left: 20px;
+        transition: 0.4s ease;
+    }
+    #logo{
+        font-size: 40px;
+    }
+    #section-1{
+        display: block;
+        overflow: hidden;
+        width: 300px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    #artigo p{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 13px;
+        padding: 20px;
+    }
+    #artigo p img{
+        width: 200px;
+        height: 270px;
+    }
+    #artigo p b{
+        letter-spacing: -1px;
+        font-size: 17px;
+    }
+}
+@media(max-width: 540px){
+    #logo{
+        font-size: 30px; 
+    }
+}
